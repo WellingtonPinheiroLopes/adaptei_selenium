@@ -1,1 +1,2 @@
-toEnter = "Entar"
+toEnter = "Entrar"
+selectcompany = "SS"

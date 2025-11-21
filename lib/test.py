@@ -1,3 +1,3 @@
-from lib.language.l_selenium import test
+from lib.login.login import login
 
-test()
+login()

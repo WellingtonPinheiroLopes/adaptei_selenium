@@ -12,21 +12,22 @@ options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options)
 
 
+def expectedTime(iformTime):
+    time.sleep(iformTime)
+
+
 def writingInHTMLFieldsContainingTextTypeId(tagHTML, attribute, attributevalue, text):
     driver.find_element(
         By.XPATH, f"//{tagHTML}[@{attribute}='{attributevalue}']"
     ).send_keys(text)
+    expectedTime(oneSeconds)
 
 
 def ClickOnAnHTMLElementContainingText(tagHTML, nameText):
-
     driver.find_element(
         By.XPATH, f"//{tagHTML}[normalize-space(text())='{nameText}']"
     ).click()
-
-
-def expectedTime(iformTime):
-    time.sleep(iformTime)
+    expectedTime(oneSeconds)
 
 
 def vistUrl(url):

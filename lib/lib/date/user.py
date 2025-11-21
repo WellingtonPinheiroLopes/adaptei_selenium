@@ -1,2 +1,2 @@
-dUser = "josereicardo@syncode.com.br"
+dUser = "josericardo@syncode.com.br"
 dPassword = "OutraSenha"
