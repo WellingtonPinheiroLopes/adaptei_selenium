@@ -23,10 +23,8 @@ def writingInHTMLFieldsContainingTextTypeId(tagHTML, attribute, attributevalue, 
     expectedTime(oneSeconds)
 
 
-def ClickOnAnHTMLElementContainingText(tagHTML, nameText):
-    driver.find_element(
-        By.XPATH, f"//{tagHTML}[normalize-space(text())='{nameText}']"
-    ).click()
+def ClickOnAnHTMLElementContainingText(tagHTML, elementsHTML, nameText):
+    driver.find_element(By.XPATH, f"//{tagHTML}[{elementsHTML}='{nameText}']").click()
     expectedTime(oneSeconds)
 
 

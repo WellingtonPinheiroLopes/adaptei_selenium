@@ -1,2 +1,0 @@
-toEnter = "Entrar"
-selectcompany = "SS"

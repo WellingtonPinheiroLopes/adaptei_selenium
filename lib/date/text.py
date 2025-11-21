@@ -1,0 +1,2 @@
+toEnter = "Entrar"
+selectcompany = "SS"
