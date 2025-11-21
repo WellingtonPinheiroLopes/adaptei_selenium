@@ -1,0 +1,10 @@
+oneSeconds = 1
+twoSeconds = 2
+threeSeconds = 3
+fourSeconds = 4
+fiveSeconds = 5
+sixSeconds = 6
+sevenSeconds = 7
+eightSeconds = 8
+nineSeconds = 9
+tenSeconds = 10
