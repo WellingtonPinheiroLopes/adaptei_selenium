@@ -23,8 +23,20 @@ def writingInHTMLFieldsContainingTextTypeId(tagHTML, attribute, attributevalue, 
     expectedTime(oneSeconds)
 
 
+def writingInHTMLFieldsContainingText(tagHTML, attribute, attributevalue, text):
+    driver.find_element(
+        By.XPATH, f"//{tagHTML}[{attribute}='{attributevalue}']"
+    ).send_keys(text)
+    expectedTime(oneSeconds)
+
+
 def ClickOnAnHTMLElementContainingText(tagHTML, elementsHTML, nameText):
     driver.find_element(By.XPATH, f"//{tagHTML}[{elementsHTML}='{nameText}']").click()
+    expectedTime(oneSeconds)
+
+
+def clearHtmlFields(tagHTML, elementsHTML, nameText):
+    driver.find_element(By.XPATH, f"//{tagHTML}[{elementsHTML}='{nameText}']").clear()
     expectedTime(oneSeconds)
 
 
