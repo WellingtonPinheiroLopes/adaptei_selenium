@@ -3,7 +3,13 @@ from libraries.date.time import oneSeconds
 from libraries.date.url import accessAdaptei
 from libraries.date.user import dPassword, dUser
 from libraries.elementsHtml.htmlLogin import password, username
-from libraries.elementsHtml.htmlStandard import button, tagId, tagInput, tagSpan, tdNormalizeSpace
+from libraries.elementsHtml.htmlStandard import (
+    button,
+    tagId,
+    tagInput,
+    tagSpan,
+    tdNormalizeSpace,
+)
 from libraries.language.l_selenium import (
     ClickOnAnHTMLElementContainingText,
     expectedTime,
@@ -12,7 +18,7 @@ from libraries.language.l_selenium import (
 )
 
 
-def test_loginSystem():
+def loginSystem():
     vistUrl(accessAdaptei)
     writingInHTMLFieldsContainingTextTypeId(tagInput, tagId, username, dUser)
     writingInHTMLFieldsContainingTextTypeId(tagInput, tagId, password, dPassword)

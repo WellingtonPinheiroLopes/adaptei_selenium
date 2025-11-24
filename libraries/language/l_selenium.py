@@ -44,3 +44,7 @@ def vistUrl(url):
     driver.get(url)
     driver.maximize_window()
     expectedTime(oneSeconds)
+
+
+def closeSystem(url):
+    driver.quit()

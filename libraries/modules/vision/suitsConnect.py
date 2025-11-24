@@ -3,7 +3,6 @@ from libraries.date.text import proPlans
 from libraries.date.time import oneSeconds
 from libraries.date.url import urlConnect
 from libraries.elementsHtml.htmlStandard import (
-
     nzPlaceholder,
     nzSelect,
     placeholder,
@@ -17,9 +16,9 @@ from libraries.elementsHtml.htmlVisionConnect import (
     connectActiveStatus,
     connectAllIntervals,
     connectAllStatuses,
+    connectAnnualInterval,
     connectFineDate,
     connectMonthlyInterval,
-    connectAnnualInterval,
     connectStartDate,
     connectStatusInactive,
     connectStatusIncomplete,
@@ -34,7 +33,7 @@ from libraries.language.l_selenium import (
 )
 
 
-def test_connectDate():
+def connectDate():
     vistUrl(urlConnect)
     expectedTime(oneSeconds)
     ###
@@ -53,7 +52,7 @@ def test_connectDate():
     writingInHTMLFieldsContainingText(
         tagInput, placeholder, connectFineDate, finalPeriod
     )
-    expectedTime(oneSeconds)
+    # expectedTime(oneSeconds)
 
     ClickOnAnHTMLElementContainingText(tagInput, placeholder, toLookFor)
     expectedTime(oneSeconds)
@@ -78,6 +77,8 @@ def searchStatus(
 
 
 def test_searchActiveStatus():
+    connectDate()
+    expectedTime(oneSeconds)
     searchStatus(
         status=True,
         informStatus=connectActiveStatus,
@@ -199,7 +200,7 @@ def test_searchForOpenStatusWithMonthlyPlans():
         informStatus=connectStatusOpen,
         allPlans=True,
         informPlans=proPlans,
-        allIntervals=True ,
+        allIntervals=True,
         informIntervals=connectMonthlyInterval,
     )
 
@@ -246,7 +247,7 @@ def test_searchForOpenStatusWithAnnualPlans():
         informStatus=connectStatusOpen,
         allPlans=True,
         informPlans=proPlans,
-        allIntervals=True ,
+        allIntervals=True,
         informIntervals=connectAnnualInterval,
     )
 
