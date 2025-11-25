@@ -1,15 +1,3 @@
-# import time
-
-# from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.by import By
-# from libraries.date.time import oneSeconds
-
-# options = Options()
-# options.add_experimental_option("detach", True)
-# driver = webdriver.Chrome(options=options)
-
-
 import time
 
 from selenium import webdriver
@@ -18,10 +6,16 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-from libraries.date.time import oneSeconds
+from libraries.date.time import (
+    oneSeconds,
+)  # Mantendo o import, assumindo que é usado em outro lugar
 
 options = Options()
 options.add_experimental_option("detach", True)
+# Se você tiver outras opções, pode adicioná-las aqui:
+# options.add_argument("--headless") # Para rodar o Chrome sem interface gráfica
+# options.add_argument("--disable-gpu")
+# options.add_argument("--no-sandbox")
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 

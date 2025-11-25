@@ -20,7 +20,6 @@ from libraries.language.l_selenium import (
 
 def loginSystem():
     vistUrl(accessAdaptei)
-
     writingInHTMLFieldsContainingTextTypeId(tagInput, tagId, username, dUser)
     expectedTime(oneSeconds)
     writingInHTMLFieldsContainingTextTypeId(tagInput, tagId, password, dPassword)
