@@ -1,3 +1,4 @@
+halfAsecond = 0.5
 oneSeconds = 1
 twoSeconds = 2
 threeSeconds = 3

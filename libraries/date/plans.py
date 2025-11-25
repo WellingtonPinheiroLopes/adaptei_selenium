@@ -1,0 +1,5 @@
+automated = "Standart"
+plans = "Planos"
+NumberOfMessages = "100"
+priceData = "100,00"
+BackupNotPerformed = "Backup não realizado"
